@@ -1,0 +1,21 @@
+{
+    "short_name": "Emp Track",
+    "name": "Goonj Employee Tracking App",
+    "icons": [
+      {
+        "src": "./images/192.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "./images/512.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ],
+    "start_url": "./index.html",
+    "background_color": "#1BB3f5",
+    "display": "standalone",
+    "scope": ".",
+    "theme_color": "#1bb3f5"
+  }

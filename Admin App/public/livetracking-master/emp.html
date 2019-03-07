@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Welcome Employee</title>
+        <!-- Font Icon -->
+        
+        
+        <!-- Main css -->
+       
+    <link rel="manifest" href="./manifest.json">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+     <!-- Font Icon -->
+     <link rel="stylesheet" href="fonts/themify-icons/themify-icons.css">
+
+     <!-- Main css -->
+     <link rel="stylesheet" href="css/main.css">
+     <style>
+      body, input {font-size:14pt}
+input, label {vertical-align:middle}
+.qrcode-text {padding-right:1.7em; margin-right:0}
+.qrcode-text-btn {display:inline-block; background:url(//dab1nmslvvntp.cloudfront.net/wp-content/uploads/2017/07/1499401426qr_icon.svg) 50% 50% no-repeat; height:1em; width:1.7em; margin-left:-1.7em; cursor:pointer}
+.qrcode-text-btn > input[type=file] {position:absolute; overflow:hidden; width:1px; height:1px; opacity:0}
+
+     </style>
+     <script>
+     function openQRCamera(node) {
+  var reader = new FileReader();
+  reader.onload = function() {
+    node.value = "";
+    qrcode.callback = function(res) {
+      if(res instanceof Error) {
+        alert("No QR code found. Please make sure the QR code is within the camera's frame and try again.");
+      } else {
+        node.parentNode.previousElementSibling.value = res;
+      }
+    };
+    qrcode.decode(reader.result);
+  };
+  reader.readAsDataURL(node.files[0]);
+}
+
+function showQRIntro() {
+  return confirm("Use your camera to take a picture of a QR code.");
+}
+     </script>
+</head>
+
+<body style="background-color:#f3f8ff">
+    <!--===========================NAVBAR=================================-->
+      <center><h2 style="margin-top:20px;">Passed checkpoints</h2></center> 
+      <div style="margin-top:10px;">
+      <h5 style="margin-top:40px;margin-left: 2%;display: inline-block;">Check point 1</h5>
+      <img src="./images/correct.png" alt=""  width="50">
+      </div>
+      <h5 style="margin-top:60px;margin-left: 2%;display: inline-block;">Check point 2</h5>
+      
+      <img src="./images/correct.png" alt=""  width="50" style="display:none" id="images">
+      <br>
+      <div style="text-align:center;margin:20px;" id="disp">
+      <input type="text" placeholder="Petrol Pump Name" style="margin:10px;" required>
+      <input type="text" placeholder="Petrol Pump Id" style="margin:10px;" required>
+      <input type="text" placeholder="Petrol pump Emp name" style="margin:10px;" required>
+      <input type="radio" name="gender" value="male"> Passed<br>
+      <br>
+      <h3>Or Scan QR code</h3>
+      <input type=text size=16 placeholder="Tracking Code" class=qrcode-text><label class=qrcode-text-btn><input type=file accept="image/*" capture=environment onclick="return showQRIntro();" onchange="openQRCamera(this);" tabindex=-1></label> 
+<input type=button value="Go" disabled>
+        <br>
+      <button class="btn btn-primary mt-3" onclick="hide()">Submit</button>
+      <script>
+        function hide(){
+          document.getElementById('images').style.display='inline-block';
+          document.getElementById('disp').style.display='none';
+        }
+      </script>
+    </div>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
