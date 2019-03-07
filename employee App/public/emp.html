@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Welcome Employee</title>
+        <!-- Font Icon -->
+        <link href="https://fonts.googleapis.com/css?family=Laila" rel="stylesheet">
+        <link rel="stylesheet" href="./form/colorlib-wizard-11/fonts/themify-icons/themify-icons.css">
+        <!-- Main css -->
+        <link rel="stylesheet" href="./form/colorlib-wizard-11/css/style.css">
+    <link rel="manifest" href="./manifest.json">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+     <!-- Font Icon -->
+     <link rel="stylesheet" href="fonts/themify-icons/themify-icons.css">
+
+     <!-- Main css -->
+     <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body style="background:linear-gradient(#2193b0,#6dd5ed,#fff)">
+    <!--===========================NAVBAR=================================-->
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background:linear-gradient(45,#5433FF,#20BDFF,#A5FECB);box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);">
+            <img src="images/x.webp" alt="Goonj" class="img-title" width="7%">
+            
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ml-auto mr-3">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Contact us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Notifications
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link " href="#" tabindex="-1">Sign out</a>
+                    </li>
+                  </ul>
+                  
+                </div>
+              </nav>
+              <!--==============================Navbar finished==============================-->
+              
+
+
+    <div class="main">
+        <div class="container">
+            <h1 style="text-align:center;position:relative;top:20px;">Welcome <span id="empName">bunny</span></h1>
+            <br>
+            <br>
+            <h3 style="text-align:center">Your Orders</h3>
+            <br>
+            <ul>
+                <li style="position:relative;left:30px;" id="abcd">No Requests</li>
+                
+            </ul>
+            <br>
+        </div>
+            <br>
+            <div class="container abcd">
+                <br>
+                <br>
+                <center><a href="request.html" class="myButton">Make a new Request</a></center>
+                <br>
+                <br>
+            </div>
+        
+    </div>
+
+  <!--===================FIREBASE============-->
+  <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyDrzp4KnRAvKfdpzxk6mXbjXhE10aZ8Bvs",
+      authDomain: "goonjlast.firebaseapp.com",
+      databaseURL: "https://goonjlast.firebaseio.com",
+      projectId: "goonjlast",
+      storageBucket: "goonjlast.appspot.com",
+      messagingSenderId: "224064226731"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script>
+    var name00 = document.getElementById('empName').innerHTML;
+    var ref = firebase.database().ref("query/"+name00);
+    //console.log(ref);
+    ref.once('value').then(function(data){ 
+    var v = data.val();
+    console.log(v);
+    if(v==null){
+            console.log('not featching')
+        }
+        else{
+            
+            
+        }
+    });
+  </script>
+    <!-- JS -->
+    <script src="./form/colorlib-wizard-11/vendor/jquery/jquery.min.js"></script>
+    <script src="./form/colorlib-wizard-11/vendor/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="./form/colorlib-wizard-11/vendor/jquery-validation/dist/additional-methods.min.js"></script>
+    <script src="./form/colorlib-wizard-11/vendor/jquery-steps/jquery.steps.min.js"></script>
+    <script src="./form/colorlib-wizard-11/vendor/minimalist-picker/dobpicker.js"></script>
+    <script src="./form/colorlib-wizard-11/js/main.js"></script>
+    <!--======================Bootstrap==========================-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

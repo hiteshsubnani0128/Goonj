@@ -1,0 +1,17 @@
+
+<script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDWj3GMV5Nx6XS-9xvRGxc7AQI_Y9Mz1wI",
+    authDomain: "mygoonjempapp.firebaseapp.com",
+    databaseURL: "https://mygoonjempapp.firebaseio.com",
+    projectId: "mygoonjempapp",
+    storageBucket: "mygoonjempapp.appspot.com",
+    messagingSenderId: "234684383584"
+  };
+  firebase.initializeApp(config);
+</script>
+
+====================================FIREBASE======================================
+

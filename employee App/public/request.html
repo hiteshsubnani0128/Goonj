@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Welcome Employee</title>
+        <!-- Font Icon -->
+        <link href="https://fonts.googleapis.com/css?family=Laila" rel="stylesheet">
+        <link rel="stylesheet" href="./form/colorlib-wizard-11/fonts/themify-icons/themify-icons.css">
+        <!-- Main css -->
+        <link rel="stylesheet" href="./form/colorlib-wizard-11/css/style.css">
+    <link rel="manifest" href="./manifest.json">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+     <!-- Font Icon -->
+     <link rel="stylesheet" href="fonts/themify-icons/themify-icons.css">
+
+     <!-- Main css -->
+     <link rel="stylesheet" href="css/style.css">
+     <style>
+    
+    @media only screen and (max-width: 600px) {
+    .img-1,.img-2,.img-3,.img-4{
+        width: 50%;
+    }
+
+    thead th:not(:first-child) {
+        display: none;
+    }
+
+    td, th {
+        display: block;
+    }
+
+    td[data-th]:before  {
+        content: attr(data-th);
+    }
+    
+}
+
+    </style>
+</head>
+
+<body style="background:linear-gradient(#2193b0,#6dd5ed,#fff)">
+    <!--===========================NAVBAR=================================-->
+        <nav class="navbar navbar-expand-lg navbar-dark" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);background-color:white;color:black; " >
+            <img src="images/x.webp" alt="Goonj" class="img-title" width="7%">
+            
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent" style="color:#233142">
+                  <ul class="navbar-nav ml-auto mr-3">
+                    <li class="nav-item active">
+                      <a style="color:#233142" class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a style="color:#233142" class="nav-link" href="#">Contact us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a style="color:#233142" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-bell" aria-hidden="true"></i>
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a style="color:#233142" class="dropdown-item" href="#">Action</a>
+                        <a style="color:#233142" class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a style="color:#233142" class="dropdown-item" href="#">Something else here</a>
+                      </div>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link " href="#" tabindex="-1" style="color:#233142" >Sign out</a>
+                    </li>
+                  </ul>
+                  
+                </div>
+              </nav>
+              <!--==============================Navbar finished==============================-->
+              
+
+
+    <div class="main">
+
+        <div class="container">
+            <h2>Request Form</h2>
+            <form method="POST" id="signup-form" class="signup-form">
+                    <h3>
+                        <span class="icon"><i class="ti-user"></i></span>
+                        <span class="title_text">Accessories</span>
+                    </h3>
+                    <fieldset>
+                        <legend>
+                            <span class="step-heading">Item Category :</span>
+                            <span class="step-number">Step 1 / 4</span>
+                        </legend>
+                        <div style="padding:20px">
+                            <table width="100%" style="text-align:center" border="1">
+                                <tr>
+                                    <td onclick="document.getElementById('show1').style.display='block'">
+                                        <img class="img-1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKADXcNSirKV5d3Se4vTx9twy8Tzm0ErGiX4soZCM1G2jISH3wXw" width="20%" alt="">
+                                        <h4>Clothes</h4>
+                                        <div style="display:none" id="show1">
+                                                <div class="col-xs-2">
+                                                    <p style="display:inline-block;">T-shirts : </p>
+                                                    <input id="ts" style="width:50%;display: inline-block;" class="form-control" id="ex1" type="number" placeholder="Enter">
+                                                </div>
+                                                <div class="col-xs-2">
+                                                        <p style="display:inline-block;">Jeans : </p>
+                                                        <input id="je" style="width:50%;display: inline-block;" class="form-control" id="ex1" type="number" placeholder="Enter">
+                                                </div>
+                                                <div class="col-xs-2">
+                                                        <p style="display:inline-block;">Saree : </p>
+                                                        <input id="sa" style="width:50%;display: inline-block;" class="form-control" id="ex1" type="number" placeholder="Enter">
+                                                </div>
+                                                <div class="col-xs-2">
+                                                        <p style="display:inline-block;">Suits : </p>
+                                                        <input id="su" style="width:50%;display: inline-block;" class="form-control" id="ex1" type="number" placeholder="Enter">
+                                                </div>
+                                                <button class="btn btn-primary" type="button" onclick="heya1()">Submit</button>
+                                                <script>
+                                                    function heya1(){
+                                                        var tshirt = document.getElementById('ts').value;
+                                                        var jeans = document.getElementById('je').value;
+                                                        var saree = document.getElementById('sa').value;
+                                                        var suit = document.getElementById('su').value;
+                                                        localStorage.setItem("tshirts", tshirt);
+                                                        localStorage.setItem("jeans", jeans);
+                                                        localStorage.setItem("saree", saree);
+                                                        localStorage.setItem("suit", suit);
+
+                                                    }
+                                                    </script>
+                                        </div>
+                                        
+                                    </td>
+                                    <td onclick="document.getElementById('show2').style.display='block'">
+                                        <img class="img-1 mt-2" src="./images/pills.png" width="20%" alt="Med">
+                                        <h4 >Medicines</h4>
+                                        <div style="display:none" id="show2">
+                                                <div class="col-xs-2">
+                                                    <p style="display:inline-block;">Antibiotics : </p>
+                                                    <input id="ab" style="width:50%;display: inline-block;" class="form-control" type="number" placeholder="Enter">
+                                                </div>
+                                                <div class="col-xs-2">
+                                                        <p style="display:inline-block;">Painkiller : </p>
+                                                        <input id="pain" style="width:50%;display: inline-block;" class="form-control" type="number" placeholder="Enter">
+                                                </div>
+                                                <div class="col-xs-2">
+                                                        <p style="display:inline-block;">Asprin : </p>
+                                                        <input id="asp" style="width:50%;display: inline-block;" class="form-control" type="number" placeholder="Enter">
+                                                </div>
+                                                <div class="col-xs-2">
+                                                        <p style="display:inline-block;">Cold : </p>
+                                                        <input id="col" style="width:50%;display: inline-block;" class="form-control"  type="number" placeholder="Enter">
+                                                </div>
+                                                <button class="btn btn-primary mt-2 mb-3" type="button" onclick="heya2()">Submit</button>
+                                                <script>
+                                                    function heya2(){
+                                                        var ant = document.getElementById('ab').value;
+                                                        var pain = document.getElementById('pain').value;
+                                                        var asp = document.getElementById('asp').value;
+                                                        var col = document.getElementById('col').value;
+                                                        localStorage.setItem("ant", ant);
+                                                        localStorage.setItem("pain", pain);
+                                                        localStorage.setItem("asp", asp);
+                                                        localStorage.setItem("col", col);
+
+                                                    }
+                                                    </script>
+                                        </div>
+                                        
+                                    </td>
+                                </tr>
+                                <tr>
+                                        <td onclick="document.getElementById('show3').style.display='block'">
+                                                <img class="img-1 mt-3" src="./images/milk.png" width="20%" alt="Med">
+                                                <h4>Milk and Breads</h4>
+                                                <div style="display:none" id="show3">
+                                                        <div class="col-xs-2">
+                                                            <p style="display:inline-block;">Milk Bottles : </p>
+                                                            <input id="mb" style="width:50%;display: inline-block;" class="form-control" id="ex1" type="number" placeholder="Enter">
+                                                        </div>
+                                                        <div class="col-xs-2">
+                                                                <p style="display:inline-block;">Breads : </p>
+                                                                <input id="bre" style="width:50%;display: inline-block;" class="form-control" id="ex1" type="number" placeholder="Enter">
+                                                        </div>
+                                                        <div class="col-xs-2">
+                                                                <p style="display:inline-block;">Biscuits : </p>
+                                                                <input id="bis" style="width:50%;display: inline-block;" class="form-control" id="ex1" type="number" placeholder="Enter">
+                                                        </div>
+                                                        
+                                                        <button class="btn btn-primary mt-2 mb-3" type="button" onclick="heya3()">Submit</button>
+                                                        <script>
+                                                            function heya3(){
+                                                                var mb = document.getElementById('mb').value;
+                                                                var bre = document.getElementById('bre').value;
+                                                                var bis = document.getElementById('bis').value;
+                                                                localStorage.setItem("mb", mb);
+                                                                localStorage.setItem("bre", bre);
+                                                                localStorage.setItem("bis", bis);
+                                                                
+        
+                                                            }
+                                                            </script>
+                                                </div>
+                                                
+                                            </td>
+                                        
+                                            <td onclick="document.getElementById('show4').style.display='block'">
+                                                    <img class="img-1 mt-3" src="./images/woolen-jacket.png" width="20%" alt="Med">
+                                                    <h4>Woolens</h4>
+                                                    <div style="display:none" id="show4">
+                                                            <div class="col-xs-2">
+                                                                <p style="display:inline-block;">For Kids : </p>
+                                                                <input id="kids" style="width:50%;display: inline-block;" class="form-control" id="ex1" type="number" placeholder="Enter">
+                                                            </div>
+                                                            <div class="col-xs-2">
+                                                                    <p style="display:inline-block;">For Mens : </p>
+                                                                    <input id="mans" style="width:50%;display: inline-block;" class="form-control" id="ex1" type="number" placeholder="Enter">
+                                                            </div>
+                                                            <div class="col-xs-2">
+                                                                    <p style="display:inline-block;">For Womens : </p>
+                                                                    <input id="wom" style="width:50%;display: inline-block;" class="form-control" id="ex1" type="number" placeholder="Enter">
+                                                            </div>
+                                                            
+                                                            <button class="btn btn-primary mt-2 mb-3" type="button" onclick="heya4()">Submit</button>
+                                                            <script>
+                                                                function heya4(){
+                                                                    var kids = document.getElementById('kids').value;
+                                                                    var mans = document.getElementById('mans').value;
+                                                                    var wom = document.getElementById('wom').value;
+                                                                    
+                                                                    localStorage.setItem("kids", kids);
+                                                                    localStorage.setItem("mans", mans);
+                                                                    localStorage.setItem("wom", wom);
+                                                                    
+            
+                                                                }
+                                                                </script>
+                                                    </div>
+                                                    
+                                                </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img class="img-1" src="data:image/png;base64,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" width="20%;" alt="">
+                                        <h4> Others</h4></td>
+                                        <div style="display:none" id="show4">
+                                                <div class="col-xs-2">
+                                                    <p style="display:inline-block;">For Kids : </p>
+                                                    <input id="kids" style="width:50%;display: inline-block;" class="form-control" id="ex1" type="number" placeholder="Enter">
+                                                </div>
+                                                <div class="col-xs-2">
+                                                        <p style="display:inline-block;">For Mens : </p>
+                                                        <input id="mans" style="width:50%;display: inline-block;" class="form-control" id="ex1" type="number" placeholder="Enter">
+                                                </div>
+                                                <div class="col-xs-2">
+                                                        <p style="display:inline-block;">For Womens : </p>
+                                                        <input id="wom" style="width:50%;display: inline-block;" class="form-control" id="ex1" type="number" placeholder="Enter">
+                                                </div>
+                                </tr>
+                            </table>
+                        </div>
+                    </fieldset>
+
+                    <h3 class="abc">
+                        <span class="icon"><i class="ti-email"></i></span>
+                        <span class="title_text">Contact</span>
+                    </h3>
+                    <fieldset>
+                        <legend>
+                            <span class="step-heading">Contact Information: </span>
+                            <span class="step-number">Step 2 / 3</span>
+                        </legend>
+                        <div class="form-group">
+                            <label for="text" class="form-label required">Name</label>
+                            <input type="text" name="email" id="name11" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone" class="form-label required">Phone</label>
+                            <input type="number" name="phone" id="phone" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="address" class="form-label required">Address</label>
+                            <input type="text" name="address" id="address" />
+                        </div>
+                        <div class="form-group">
+                                <label for="address" class="form-label required">City</label>
+                                <input type="text" name="address" id="address" />
+                        </div>
+                        <div class="form-select">
+                            <label for="country" class="form-label">State</label>
+                            <div class="select-list">
+                                <select name="country" id="country">
+                                    <option value="">Kerala</option>
+                                    <option value="Australia">Rajasthan</option>
+                                    <option value="USA">Maharashtra</option>
+                                    <option value="USA">Delhi</option>
+                                    <option value="USA">Tamil Nadu</option>
+                                    <option value="USA">Uttar pradesh</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        
+                    </fieldset>
+
+                    <h3>
+                        <span class="icon"><i class="ti-star"></i></span>
+                        <span class="title_text">Offical</span>
+                    </h3>
+                    <fieldset>
+                        <legend>
+                            <span class="step-heading">Order confirmation: </span>
+                            <span class="step-number">Step 3 / 3</span>
+                        </legend>
+                        <h4>Clothes :</h4>
+                        <h6>Jeans : <span id="jeans">0</span></h6>
+                        <h6>Saree : <span id="saree">0</span></h6>
+                        <h6>Suits : <span id="suit">0</span></h6>
+                        <h6>T-shirts : <span id="ts1">0</span></h6>
+                        <h4>Medicines :</h4>
+                        <h6>Antibiotics : <span id="ant">0</span></h6>
+                        <h6>Asprin : <span id="aspa">0</span></h6>
+                        <h6>Painkiller : <span id="paink">0</span></h6>
+                        <h6>Cold : <span id="coll">0</span></h6>
+                        
+                        <script>
+                            document.getElementById("ts1").innerHTML = localStorage.getItem("tshirts");
+                            document.getElementById("jeans").innerHTML = localStorage.getItem("jeans");
+                            document.getElementById("saree").innerHTML = localStorage.getItem("saree");
+                            document.getElementById("suit").innerHTML = localStorage.getItem("suit");
+                            document.getElementById("ant").innerHTML = localStorage.getItem("ant");
+                            document.getElementById("aspa").innerHTML = localStorage.getItem("asp");
+                            document.getElementById("paink").innerHTML = localStorage.getItem("pain");
+                            document.getElementById("coll").innerHTML = localStorage.getItem("col");
+                        </script>
+                    </fieldset>
+            </form>
+        </div>
+
+    </div>
+    <div class="footer">
+       
+    </div>
+
+    <!-- JS -->
+    <script src="./js/script.js"></script>
+    <script src="./form/colorlib-wizard-11/vendor/jquery/jquery.min.js"></script>
+    <script src="./form/colorlib-wizard-11/vendor/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="./form/colorlib-wizard-11/vendor/jquery-validation/dist/additional-methods.min.js"></script>
+    <script src="./form/colorlib-wizard-11/vendor/jquery-steps/jquery.steps.min.js"></script>
+    <script src="./form/colorlib-wizard-11/vendor/minimalist-picker/dobpicker.js"></script>
+    <script src="./form/colorlib-wizard-11/js/main.js"></script>
+    <!--======================Bootstrap==========================-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!--===================FIREBASE============-->
+    <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDrzp4KnRAvKfdpzxk6mXbjXhE10aZ8Bvs",
+    authDomain: "goonjlast.firebaseapp.com",
+    databaseURL: "https://goonjlast.firebaseio.com",
+    projectId: "goonjlast",
+    storageBucket: "goonjlast.appspot.com",
+    messagingSenderId: "224064226731"
+  };
+  firebase.initializeApp(config);
+
+
+
+</script>
+<!---==============FS===========-->
+<script>
+    function send(){
+        var name0 = document.getElementById('name11').value;
+        var firebaseRef = firebase.database().ref();
+        firebaseRef.child("query").child(name0).set({"clothes":{"Jeans":localStorage.getItem("jeans"),"tshirt":localStorage.getItem("tshirts"),"saree":localStorage.getItem("saree"),"suits":localStorage.getItem("suit")},"Med":{"Antibiotics":localStorage.getItem("ant"),"painkiller":localStorage.getItem("pain"),"asprin":localStorage.getItem("col")}});
+        alert("Request Sent");
+    }
+</script>
+</body>
+</html>

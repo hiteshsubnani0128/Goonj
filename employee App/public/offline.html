@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Welcome Employee</title>
+        <!-- Font Icon -->
+        <link href="https://fonts.googleapis.com/css?family=Laila" rel="stylesheet">
+        <link rel="stylesheet" href="./form/colorlib-wizard-11/fonts/themify-icons/themify-icons.css">
+        <!-- Main css -->
+        <link rel="stylesheet" href="./form/colorlib-wizard-11/css/style.css">
+    <link rel="manifest" href="./manifest.json">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+     <!-- Font Icon -->
+     <link rel="stylesheet" href="fonts/themify-icons/themify-icons.css">
+
+     <!-- Main css -->
+     <link rel="stylesheet" href="css/style.css">
+     <style>
+    
+    @media only screen and (max-width: 600px) {
+    .img-1,.img-2,.img-3,.img-4{
+        width: 50%;
+    }
+
+    thead th:not(:first-child) {
+        display: none;
+    }
+
+    td, th {
+        display: block;
+    }
+
+    td[data-th]:before  {
+        content: attr(data-th);
+    }
+    
+}
+
+    </style>
+</head>
+
+<body style="background-color:#f5e4c3">
+    <!--===========================NAVBAR=================================-->
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#4f9da6">
+            <img src="images/x.webp" alt="Goonj" class="img-title" width="7%">
+            
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ml-auto mr-3">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Contact us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-bell" aria-hidden="true"></i>
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link " href="#" tabindex="-1">Sign out</a>
+                    </li>
+                  </ul>
+                  
+                </div>
+              </nav>
+              <!--==============================Navbar finished==============================-->
+              
+
+
+    <div class="main">
+
+        <div class="container">
+            <h2>Request Form</h2>
+            <form method="POST" id="signup-form" class="signup-form">
+                    <h3>
+                        <span class="icon"><i class="ti-user"></i></span>
+                        <span class="title_text">Accessories</span>
+                    </h3>
+                    <fieldset>
+                        <legend>
+                            <span class="step-heading">Item Category :</span>
+                            <span class="step-number">Step 1 / 4</span>
+                        </legend>
+                        <div style="padding:20px">
+                            <table width="100%" style="text-align:center" border="1">
+                                <tr>
+                                    <td onclick="document.getElementById('show1').style.display='block'">
+                                        <img class="img-1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKADXcNSirKV5d3Se4vTx9twy8Tzm0ErGiX4soZCM1G2jISH3wXw" width="20%" alt="">
+                                        <h4>Clothes</h4>
+                                        <div style="display:none" id="show1">
+                                                <div class="col-xs-2">
+                                                    <p style="display:inline-block;">T-shirts : </p>
+                                                    <input id="ts" style="width:50%;display: inline-block;" class="form-control" id="ex1" type="number" placeholder="Enter">
+                                                </div>
+                                                <div class="col-xs-2">
+                                                        <p style="display:inline-block;">Jeans : </p>
+                                                        <input id="je" style="width:50%;display: inline-block;" class="form-control" id="ex1" type="number" placeholder="Enter">
+                                                </div>
+                                                <div class="col-xs-2">
+                                                        <p style="display:inline-block;">Saree : </p>
+                                                        <input id="sa" style="width:50%;display: inline-block;" class="form-control" id="ex1" type="number" placeholder="Enter">
+                                                </div>
+                                                <div class="col-xs-2">
+                                                        <p style="display:inline-block;">Suits : </p>
+                                                        <input id="su" style="width:50%;display: inline-block;" class="form-control" id="ex1" type="number" placeholder="Enter">
+                                                </div>
+                                                <button class="btn btn-primary" type="button" onclick="heya1()">Submit</button>
+                                                <script>
+                                                    function heya1(){
+                                                        var tshirt = document.getElementById('ts').value;
+                                                        var jeans = document.getElementById('je').value;
+                                                        var saree = document.getElementById('sa').value;
+                                                        var suit = document.getElementById('su').value;
+                                                        localStorage.setItem("tshirts", tshirt);
+                                                        localStorage.setItem("jeans", jeans);
+                                                        localStorage.setItem("saree", saree);
+                                                        localStorage.setItem("suit", suit);
+
+                                                    }
+                                                    </script>
+                                        </div>
+                                        
+                                    </td>
+                                    <td onclick="document.getElementById('show2').style.display='block'">
+                                        <img class="img-1 mt-2" src="./images/pills.png" width="20%" alt="Med">
+                                        <h4 >Medicines</h4>
+                                        <div style="display:none" id="show2">
+                                                <div class="col-xs-2">
+                                                    <p style="display:inline-block;">Antibiotics : </p>
+                                                    <input id="ab" style="width:50%;display: inline-block;" class="form-control" type="number" placeholder="Enter">
+                                                </div>
+                                                <div class="col-xs-2">
+                                                        <p style="display:inline-block;">Painkiller : </p>
+                                                        <input id="pain" style="width:50%;display: inline-block;" class="form-control" type="number" placeholder="Enter">
+                                                </div>
+                                                <div class="col-xs-2">
+                                                        <p style="display:inline-block;">Asprin : </p>
+                                                        <input id="asp" style="width:50%;display: inline-block;" class="form-control" type="number" placeholder="Enter">
+                                                </div>
+                                                <div class="col-xs-2">
+                                                        <p style="display:inline-block;">Cold : </p>
+                                                        <input id="col" style="width:50%;display: inline-block;" class="form-control"  type="number" placeholder="Enter">
+                                                </div>
+                                                <button class="btn btn-primary mt-2 mb-3" type="button" onclick="heya2()">Submit</button>
+                                                <script>
+                                                    function heya2(){
+                                                        var ant = document.getElementById('ab').value;
+                                                        var pain = document.getElementById('pain').value;
+                                                        var asp = document.getElementById('asp').value;
+                                                        var col = document.getElementById('col').value;
+                                                        localStorage.setItem("ant", ant);
+                                                        localStorage.setItem("pain", pain);
+                                                        localStorage.setItem("asp", asp);
+                                                        localStorage.setItem("col", col);
+
+                                                    }
+                                                    </script>
+                                        </div>
+                                        
+                                    </td>
+                                </tr>
+                                <tr>
+                                        <td onclick="document.getElementById('show3').style.display='block'">
+                                                <img class="img-1 mt-3" src="./images/milk.png" width="20%" alt="Med">
+                                                <h4>Milk and Breads</h4>
+                                                <div style="display:none" id="show3">
+                                                        <div class="col-xs-2">
+                                                            <p style="display:inline-block;">Milk Bottles : </p>
+                                                            <input id="mb" style="width:50%;display: inline-block;" class="form-control" id="ex1" type="number" placeholder="Enter">
+                                                        </div>
+                                                        <div class="col-xs-2">
+                                                                <p style="display:inline-block;">Breads : </p>
+                                                                <input id="bre" style="width:50%;display: inline-block;" class="form-control" id="ex1" type="number" placeholder="Enter">
+                                                        </div>
+                                                        <div class="col-xs-2">
+                                                                <p style="display:inline-block;">Biscuits : </p>
+                                                                <input id="bis" style="width:50%;display: inline-block;" class="form-control" id="ex1" type="number" placeholder="Enter">
+                                                        </div>
+                                                        
+                                                        <button class="btn btn-primary mt-2 mb-3" type="button" onclick="heya3()">Submit</button>
+                                                        <script>
+                                                            function heya3(){
+                                                                var mb = document.getElementById('mb').value;
+                                                                var bre = document.getElementById('bre').value;
+                                                                var bis = document.getElementById('bis').value;
+                                                                localStorage.setItem("mb", mb);
+                                                                localStorage.setItem("bre", bre);
+                                                                localStorage.setItem("bis", bis);
+                                                                
+        
+                                                            }
+                                                            </script>
+                                                </div>
+                                                
+                                            </td>
+                                        
+                                            <td onclick="document.getElementById('show4').style.display='block'">
+                                                    <img class="img-1 mt-3" src="./images/woolen-jacket.png" width="20%" alt="Med">
+                                                    <h4>Woolens</h4>
+                                                    <div style="display:none" id="show4">
+                                                            <div class="col-xs-2">
+                                                                <p style="display:inline-block;">For Kids : </p>
+                                                                <input id="kids" style="width:50%;display: inline-block;" class="form-control" id="ex1" type="number" placeholder="Enter">
+                                                            </div>
+                                                            <div class="col-xs-2">
+                                                                    <p style="display:inline-block;">For Mens : </p>
+                                                                    <input id="mans" style="width:50%;display: inline-block;" class="form-control" id="ex1" type="number" placeholder="Enter">
+                                                            </div>
+                                                            <div class="col-xs-2">
+                                                                    <p style="display:inline-block;">For Womens : </p>
+                                                                    <input id="wom" style="width:50%;display: inline-block;" class="form-control" id="ex1" type="number" placeholder="Enter">
+                                                            </div>
+                                                            
+                                                            <button class="btn btn-primary mt-2 mb-3" type="button" onclick="heya4()">Submit</button>
+                                                            <script>
+                                                                function heya4(){
+                                                                    var kids = document.getElementById('kids').value;
+                                                                    var mans = document.getElementById('mans').value;
+                                                                    var wom = document.getElementById('wom').value;
+                                                                    
+                                                                    localStorage.setItem("kids", kids);
+                                                                    localStorage.setItem("mans", mans);
+                                                                    localStorage.setItem("wom", wom);
+                                                                    
+            
+                                                                }
+                                                                </script>
+                                                    </div>
+                                                    
+                                                </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </fieldset>
+
+                    <h3 class="abc">
+                        <span class="icon"><i class="ti-email"></i></span>
+                        <span class="title_text">Contact</span>
+                    </h3>
+                    <fieldset>
+                        <legend>
+                            <span class="step-heading">Contact Information: </span>
+                            <span class="step-number">Step 2 / 4</span>
+                        </legend>
+                        <div class="form-group">
+                            <label for="text" class="form-label required">Name</label>
+                            <input type="text" name="email" id="name11" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone" class="form-label required">Phone</label>
+                            <input type="number" name="phone" id="phone" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="address" class="form-label required">Address</label>
+                            <input type="text" name="address" id="address" />
+                        </div>
+                        <div class="form-group">
+                                <label for="address" class="form-label required">City</label>
+                                <input type="text" name="address" id="address" />
+                        </div>
+                        <div class="form-select">
+                            <label for="country" class="form-label">State</label>
+                            <div class="select-list">
+                                <select name="country" id="country">
+                                    <option value="">Kerala</option>
+                                    <option value="Australia">Rajasthan</option>
+                                    <option value="USA">Maharashtra</option>
+                                    <option value="USA">Delhi</option>
+                                    <option value="USA">Tamil Nadu</option>
+                                    <option value="USA">Uttar pradesh</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        
+                    </fieldset>
+
+                    <h3>
+                        <span class="icon"><i class="ti-star"></i></span>
+                        <span class="title_text">Offical</span>
+                    </h3>
+                    <fieldset>
+                        <legend>
+                            <span class="step-heading">Order confirmation: </span>
+                            <span class="step-number">Step 3 / 3</span>
+                        </legend>
+                        <h4>Clothes :</h4>
+                        <h6>Jeans : <span id="jeans">0</span></h6>
+                        <h6>Saree : <span id="saree">0</span></h6>
+                        <h6>Suits : <span id="suit">0</span></h6>
+                        <h6>T-shirts : <span id="ts1">0</span></h6>
+                        <h4>Medicines :</h4>
+                        <h6>Antibiotics : <span id="ant">0</span></h6>
+                        <h6>Asprin : <span id="asp">0</span></h6>
+                        <h6>Painkiller : <span id="paink">0</span></h6>
+                        
+                        <script>
+                            document.getElementById("ts1").innerHTML = localStorage.getItem("tshirts");
+                            document.getElementById("jeans").innerHTML = localStorage.getItem("jeans");
+                            document.getElementById("saree").innerHTML = localStorage.getItem("saree");
+                            document.getElementById("suit").innerHTML = localStorage.getItem("suit");
+                            document.getElementById("ant").innerHTML = localStorage.getItem("ant");
+                            document.getElementById("asp").innerHTML = localStorage.getItem("asp");
+                            document.getElementById("paink").innerHTML = localStorage.getItem("pain");
+                        
+                        </script>
+                        <button onclick="send()">Request</button>
+                    </fieldset>
+            </form>
+        </div>
+
+    </div>
+    <div class="footer">
+       
+    </div>
+
+    <!-- JS -->
+    <script src="./js/script.js"></script>
+    <script src="./form/colorlib-wizard-11/vendor/jquery/jquery.min.js"></script>
+    <script src="./form/colorlib-wizard-11/vendor/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="./form/colorlib-wizard-11/vendor/jquery-validation/dist/additional-methods.min.js"></script>
+    <script src="./form/colorlib-wizard-11/vendor/jquery-steps/jquery.steps.min.js"></script>
+    <script src="./form/colorlib-wizard-11/vendor/minimalist-picker/dobpicker.js"></script>
+    <script src="./form/colorlib-wizard-11/js/main.js"></script>
+    <!--======================Bootstrap==========================-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!--===================FIREBASE============-->
+    <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDrzp4KnRAvKfdpzxk6mXbjXhE10aZ8Bvs",
+    authDomain: "goonjlast.firebaseapp.com",
+    databaseURL: "https://goonjlast.firebaseio.com",
+    projectId: "goonjlast",
+    storageBucket: "goonjlast.appspot.com",
+    messagingSenderId: "224064226731"
+  };
+  firebase.initializeApp(config);
+
+
+
+</script>
+<!---==============FS===========-->
+<script>
+    function send(){
+        var name0 = document.getElementById('name11').value;
+        var firebaseRef = firebase.database().ref();
+        firebaseRef.child("query").child(name0).set({"clothes":{"Jeans":localStorage.getItem("jeans"),"tshirt":localStorage.getItem("tshirts"),"saree":localStorage.getItem("saree"),"suits":localStorage.getItem("suit")},"Med":{"Antibiotics":localStorage.getItem("ant"),"painkiller":localStorage.getItem("pain"),"asprin":localStorage.getItem("col")}});
+        alert("You are offline Request will be Sent when Internet will be connected");
+    }
+</script>
+</body>
+</html>
