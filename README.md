@@ -18,18 +18,18 @@ Providing rehabilitation material to those whose livelihood is severed for examp
     <li>Dispatched Page</li>
 </p>
 <b>Dashboard:</b> This will connect all fundamental elements of the application. This will help easy user access
-<b>Records Page:</b> This page will hold the details of the materials available at diff centers. Stock details can be
+<br><b>Records Page:</b> This page will hold the details of the materials available at diff centers. Stock details can be
 added as well, this can be done by authorized members only. Other users can only view the records.
-<b>Demand Page:</b> This page will provide a form for the user to demand for the materials based on
+<br><b>Demand Page:</b> This page will provide a form for the user to demand for the materials based on
 requirements. Once the demand is accepted successfully a receipt will be generated for future use.
-<b>Dispatched page:</b> This page will maintain various orders that has been dispatched from the center. This
+<br><b>Dispatched page:</b> This page will maintain various orders that has been dispatched from the center. This
 page can be accessed by center’s stock manager or other authorized members only.
 When a demand is raised by the user a notification to the stock manager’s account will be sent both on its
 app as well as email account. In response he will be sending the acknowledgment of the order to user
 through app notification and on registered email & mobile no as well.
 Tracking system would be provided so that user can know the status of its order that whether the
 materials are dispatched or not, estimated time to reach and whether materials are out for delivery.
-<b><u>Offline capabilities:</b></u> Users can use this application both online and offline mode. For this we will be storing
+<br><b><u>Offline capabilities:</b></u> Users can use this application both online and offline mode. For this we will be storing
 the necessary data locally and sync them with the database whenever user gets online. While filing a
 demand request if the user if offline, user will also be asked to send the request details via mobile sms
 through his registered mobile no so that his order can be acknowledged immediately.
