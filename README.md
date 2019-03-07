@@ -1,5 +1,5 @@
-<center># Goonj<center>
-Goonj - Material management during Disaster<br>
+# Goonj
+<h2>Goonj - Material management during Disaster<br></h2>
 
 <b>We Made a Project at Smart India Hackathon 2k19 - Grand Final for Goonj.org </b> <br>
 
@@ -17,6 +17,25 @@ Providing rehabilitation material to those whose livelihood is severed for examp
     <li>Demand Page</li>
     <li>Dispatched Page</li>
 </p>
+<b>Dashboard:</b> This will connect all fundamental elements of the application. This will help easy user access
+<br><b>Records Page:</b> This page will hold the details of the materials available at diff centers. Stock details can be
+added as well, this can be done by authorized members only. Other users can only view the records.
+<br><b>Demand Page:</b> This page will provide a form for the user to demand for the materials based on
+requirements. Once the demand is accepted successfully a receipt will be generated for future use.
+<br><b>Dispatched page:</b> This page will maintain various orders that has been dispatched from the center. This
+page can be accessed by center’s stock manager or other authorized members only.
+When a demand is raised by the user a notification to the stock manager’s account will be sent both on its
+app as well as email account. In response he will be sending the acknowledgment of the order to user
+through app notification and on registered email & mobile no as well.
+Tracking system would be provided so that user can know the status of its order that whether the
+materials are dispatched or not, estimated time to reach and whether materials are out for delivery.
+<br><b><u>Offline capabilities:</b></u> Users can use this application both online and offline mode. For this we will be storing
+the necessary data locally and sync them with the database whenever user gets online. While filing a
+demand request if the user if offline, user will also be asked to send the request details via mobile sms
+through his registered mobile no so that his order can be acknowledged immediately.
+This application is to be used by goonj members only. User must be a member of goonj organization else
+access would be denied.
+<hr>
 
 <h3>Links -</h3>
 <h6>Employee WebApp and Progressive Web App - <a href="https://goonjlast.firebaseapp.com/">Employee App</a></h6>
