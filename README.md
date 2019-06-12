@@ -1,7 +1,7 @@
 # Goonj.org
 <h2>Goonj - Material management during Disaster<br></h2>
 
-<b>We Made this Project at Smart India Hackathon 2k19 - Grand Final for Goonj.org </b> <br>
+<b>We Made this Project at Smart India Hackathon(SIH) 2k19 - Grand Final for Goonj.org </b> <br>
 
 <h2>Problem Statment</h2>
 <p>One of the initiative of Goonj is to work with people and for people in the regions devastated by any sort of disasters - floods, earthquake, landslides, cloud burst, drought, winters, cyclones, Tsunami etc. Our involvement is in- 
