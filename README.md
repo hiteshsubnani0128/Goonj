@@ -17,7 +17,7 @@ Providing rehabilitation material to those whose livelihood is severed for examp
     <li>Demand Page</li>
     <li>Dispatched Page</li>
 </p>
-<b>Dashboard:</b> This will connect all fundamental elements of the application. This will help easy user access
+<b>Dashboard: </b> This will connect all fundamental elements of the application. This will help easy user access
 <br><b>Records Page: </b> This page will hold the details of the materials available at diff centers. Stock details can be
 added as well, this can be done by authorized members only. Other users can only view the records.
 <br><b>Demand Page:</b> This page will provide a form for the user to demand for the materials based on
