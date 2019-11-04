@@ -10,7 +10,7 @@ Providing rehabilitation material to those whose livelihood is severed for examp
 
 <hr>
 <h2>Our Approach : </h2>
-<p>The aim of the problem is to maintain the flow of relief material between diff centers to the disaster location. To solve this problem we will build a web app that will help us know the availability of materials at diff centers, tally the material reaching the disaster location after it’s dispatch and confirmation of the materials reached. The key features of the web app include :
+<p>The aim of the problem is to maintain the flow of relief material between diff centers to the disaster location. To solve this problem we will build a web app that will help us know the availability of materials at diff centers, tally the material reaching the disaster location after it’s dispatch and confirmation of the materials reached. The key features of the web app include:
   <ul>
     <li>Dashboard </li>
     <li>Record Page </li>
